@@ -1,15 +1,11 @@
-package Duck;
-
-public class RubberDuck extends Duck{
-    public RubberDuck(){
-        quackbehaviour = new Squeak();
-        swinBehaviour = new Floating();
-    }
-
-    @Override
-    public void display() {
-        // TODO Auto-generated method stub
-        System.out.println("I am a Rubber Duck!!");
+// RubberDuck.java
+class RubberDuck extends Duck {
+    RubberDuck() {
+        flyBehavior = new NotFly();
+        swimBehavior = new FloatSwim();  // Corrected class name
     }
     
+    void display() {
+        System.out.println("I am a Rubber Duck.");
+    }
 }
