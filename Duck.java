@@ -1,30 +1,14 @@
-package Duck;
+abstract class Duck {
+    FlyBehavior flyBehavior;
+    SwimBehavior swimBehavior;
 
-public abstract class Duck {
-    Quackbehaviour quackbehaviour;
-    SwinBehaviour swinBehaviour;
-    Fly flybehave;
-
-    // public void setSwinBehaviour(SwinBehaviour SwinBehaviour){
-    //     this.swinBehaviour = swinBehaviour;
-    // }
-
-    public void performFly(){
-        flybehave.fly();
+    public void performFly() {
+        flyBehavior.fly();
     }
-
-    public void performSwim(){
-        swinBehaviour.swim();
+    
+    public void performSwim() {
+        swimBehavior.swim();
     }
-
-    abstract public void display();
-
-    public void setQuackbehaviour(Quackbehaviour quackbehaviour){
-        this.quackbehaviour = quackbehaviour;
-    }
-
-    public void performQuack(){
-        quackbehaviour.quack();
-    }
-
+    
+    abstract void display();
 }
