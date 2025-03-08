@@ -1,5 +1,5 @@
-package Duck;
-
-public interface Fly {
-    public void fly();
+class Fly implements FlyBehavior {
+    public void fly() {
+        System.out.println("This duck can fly.");
+    }
 }
